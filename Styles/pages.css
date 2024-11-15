@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #D5D6C8;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.text, .image {
+  flex: 1;
+  padding: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+  .section:nth-child(even) {
+    flex-direction: column;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Стили для заголовка */
+header h1 {
+  color: #2A2D2C;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Стили для ссылки */
+header a {
+  text-decoration: none;
+  color: inherit; /* сохраняет цвет родителя */
+}
+
+/* При наведении */
+header a:hover {
+  color: #ddd;
+}
